@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">语音翻译宝</string>
+    <string name="support_various_languages">20种语言的随身翻译</string>
+    <string name="support_ai_company">搜狗知音提供AI服务</string>
+    <string name="hint_language_preference">设置您的翻译语言</string>
+    <string name="hint_language_preference_src">源语言</string>
+    <string name="hint_language_preference_dest">目标语言</string>
+    <string name="hint_language_chinese">中文</string>
+    <string name="hint_language_src_english">英文</string>
+    <string name="hint_language_preference_finish">完成</string>
+    <string name="hint_language_preference_cancel">跳过</string>
+    <string name="help">帮助</string>
+    <string name="request_permission_write">未获取您的读写手机存储权限（实际仅相关功能存储数据使用），语音翻译宝无法正常使用。请在应用权限设置中打开相关权限。</string>
+    <string name="request_permission_phone_state">未获取您的电话权限（实际仅为读取本机识别码），语音翻译宝无法正常使用。请在应用权限设置中打开相关权限。</string>
+    <string name="request_permission_audio_record">未获取您的录音权限（实际仅为录音），语音翻译宝无法正常使用。请在应用权限设置中打开相关权限。</string>
+    <string name="request_permission_dialog_exit">退出</string>
+    <string name="request_permission_dialog_set">设置</string>
+    <string name="hint_login_setting">登录语音翻译宝</string>
+    <string name="hint_voice_preference_setting">语音设置</string>
+    <string name="hint_favourite_setting">我的收藏</string>
+    <string name="hint_feed_back_setting">意见反馈</string>
+    <string name="hint_satisfaction_survey_setting">满意度调查</string>
+    <string name="hint_update_version_setting">版本更新</string>
+    <string name="hint_about_us_setting">关于我们</string>
+    <string name="hint_asr_dialog_cancel">取消</string>
+    <string name="hint_asr_dialog_finish">完成</string>
+    <string name="hint_voice_guide">点击下方说话，松开翻译</string>
+    <string name="hint_translate_text_input_guid">在此输入要翻译的文本</string>
+    <string name="hint_translate_text_document_guid">上传文档</string>
+    <string name="hint_translate_text_history">翻译历史</string>
+    <string name="hint_translate_text_history_more">更多</string>
+    <!--
+      <string name="language_arabic">阿拉伯文</string>
+     <string name="language_danish">丹麦文</string>
+     <string name="language_german">德文</string>
+
+     <string name="language_chinese">中文</string>
+     <string name="language_english">英文</string>
+     <string name="language_jan">日文</string>
+     <string name="language_kor">韩文</string>
+     <string name="language_french">法文</string>
+
+     <string name="language_russian">俄文</string>
+
+     <string name="language_dutch">荷兰文</string>
+
+     <string name="language_italian">意大利文</string>
+     <string name="language_polish">波兰文</string>
+     <string name="language_portuguese">葡萄牙文</string>
+     <string name="language_swedish">瑞典文</string>
+     <string name="language_thai">泰文</string>
+     <string name="language_hindi">印地文</string>
+
+     -->
+
+
+</resources>

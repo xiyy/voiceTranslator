@@ -1,0 +1,105 @@
+[{
+		"chineseName": "中文",
+		"localName": "中文",
+		"asrCode": "zh-cmn-Hans-CN",
+		"translateCode": "zh-cmn-Hans-CN"
+	},
+	{
+		"chineseName": "中文(繁体)",
+		"localName": "中文(繁体)",
+		"asrCode": "zh-cmn-Hant-TW",
+		"translateCode": "zh-cmn-Hant-TW"
+	},
+	{
+		"chineseName": "英语",
+		"localName": "English",
+		"asrCode": "en-US",
+		"translateCode": "en"
+
+	},
+	{
+		"chineseName": "日语",
+		"localName": "日本語",
+		"asrCode": "ja-JP",
+		"translateCode": "ja"
+	},
+	{
+		"chineseName": "韩语",
+		"localName": "한국어",
+		"asrCode": "ko-KR",
+		"translateCode": "ko"
+	},
+	{
+		"chineseName": "法语",
+		"localName": "Le français",
+		"asrCode": "fr-FR",
+		"translateCode": "fr"
+	},
+	{
+		"chineseName": "德语",
+		"localName": "Deutsch",
+		"asrCode": "de-DE",
+		"translateCode": "de"
+	},
+	{
+		"chineseName": "俄语",
+		"localName": "русский",
+		"asrCode": "ru-RU",
+		"translateCode": "ru"
+	},
+	{
+		"chineseName": "意大利语",
+		"localName": "lingua italiana",
+		"asrCode": "it-IT",
+		"translateCode": "it"
+	},
+	{
+		"chineseName": "阿拉伯语",
+		"localName": "العربية",
+		"asrCode": "ar-SA",
+		"translateCode": "ar"
+
+	},
+	{
+		"chineseName": "丹麦语",
+		"localName": "dansk",
+		"asrCode": "da-DK",
+		"translateCode": "da"
+	},
+	{
+		"chineseName": "荷兰语",
+		"localName": "Nederlands",
+		"asrCode": "nl-NL",
+		"translateCode": "nl"
+	},
+	{
+		"chineseName": "芬兰语",
+		"localName": "suomalainen",
+		"asrCode": "fi-FI",
+		"translateCode": "fi"
+	},
+	{
+		"chineseName": "印地语",
+		"localName": "हिन्दी",
+		"asrCode": "hi-IN",
+		"translateCode": "hi"
+	},
+	{
+		"chineseName": "波兰语",
+		"localName": "Polski",
+		"asrCode": "pl-PL",
+		"translateCode": "pl"
+	},
+	{
+		"chineseName": "瑞典语",
+		"localName": "svenska",
+		"asrCode": "sv-SE",
+		"translateCode": "sv"
+	},
+	{
+		"chineseName": "加泰罗尼亚语",
+		"localName": "Català",
+		"asrCode": "ca-ES",
+		"translateCode": "ca"
+	}
+]

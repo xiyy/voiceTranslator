@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xi.liuliu.voicetranslator">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="">
+
+        </activity>
+        <activity android:name=".activity.LanguageListActivity" />
+        <activity android:name=".activity.LanguageInitActivity">
+
+
+        </activity>
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <meta-data android:name="com.sogou.speech.trsdk-userID"
+            android:value="speech_build@sogou-inc.com"/>
+        <meta-data android:name="com.sogou.speech.trsdk-appID"
+            android:value="15Dy8oGpZg25DldDipPFqyM5HtQ"/>
+        <meta-data android:name="com.sogou.speech.trsdk-appkey"
+            android:value="sLi8bHfErc399IlJzhDsvdR7tmdPb41/+k8Y/195/lfT5khGylyXdRF4CL0eYCMJxoX8DQlRLM96s9ioe+ZG4g=="/>
+    </application>
+
+</manifest>

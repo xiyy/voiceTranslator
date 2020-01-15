@@ -1,0 +1,73 @@
+// Copyright 2018 Sogou Inc.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+package sogou.speech.auth.v1;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+
+option cc_enable_arenas = true;
+option csharp_namespace = "Sogou.Speech.Auth.V1";
+option go_package = "golang.speech.sogou.com/apis/auth/v1;auth";
+option java_multiple_files = true;
+option java_outer_classname = "AuthProto";
+option java_package = "com.sogou.speech.auth.v1";
+option objc_class_prefix = "SPB";
+option php_namespace = "Sogou\\Speech\\Auth\\V1";
+option swift_prefix = "SPB";
+
+
+service auth {
+    // Performs create token from appid and appkey operation. Token created by this method
+    // can be used for other service which your app enables.
+    // For security reasons, the number of calling create token request per minute will be limited
+    // in a reasonable range due to the quota of specific app 
+    rpc CreateToken(CreateTokenRequest) returns (CreateTokenResponse);
+
+}
+
+message CreateTokenRequest {
+
+    // *Required* appid applies from sogou speech official website
+    string appid = 1;
+
+    // *Required* secret appkey of app
+    string appkey = 2;
+
+    // *Required* valid duration for this token.
+    // for security reasons, this duration 
+    // must not greater than 10 hours
+    google.protobuf.Duration exp = 3;
+
+    // *Optional* If set, token will be created with the uuid.
+    // and other invokes of sogou speech services with this token will be
+    // validated by the same uuid
+    string uuid = 4;
+}
+
+
+message CreateTokenResponse {
+
+  // token created
+  string token = 2;
+
+  // when this token begin effective
+  google.protobuf.Timestamp begin_time = 3;
+
+  // when this token will expired
+  google.protobuf.Timestamp end_time = 4;
+}
+

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!--原始文本 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/play_tv_src_text_translate_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/small_trumpet_normal"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/input_et_src_text_translate_fragment"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="@string/hint_translate_text_input_guid"
+                    android:inputType="textMultiLine"
+                    android:text="这是原始文本，如果太多的话，滚动起来！这是原始文本，如果太多的话，滚动起来！
+这是原始文本，如果太多的话，滚动起来！
+这是原始文本，如果太多的话，滚动起来！
+这是原始文本，如果太多的话，滚动起来！
+这是原始文本，如果太多的话，滚动起来！
+这是原始文本，如果太多的话，滚动起来！
+这是原始文本，如果太多的话，滚动起来！
+这是原始文本，如果太多的话，滚动起来！
+这是原始文本，如果太多的话，滚动起来！
+这是原始文本，如果太多的话，滚动起来！"
+                    android:textColorHint="@color/grey27"
+                    android:textCursorDrawable="@drawable/shape_et_cursor_bg_text_translate"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/close_src_tv_text_translate_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/small_close_normal"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!--分割线 -->
+        <View
+            android:id="@+id/divine_src_and_dest_text_translate_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey29"
+            android:visibility="gone"></View>
+        <!--翻译的文本 -->
+        <LinearLayout
+            android:id="@+id/dest_ll_text_translate_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/play_tv_dest_text_translate_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/small_trumpet_normal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/output_tv_dest_text_translate_fragment"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:inputType="textMultiLine"
+                    android:text="这是翻译的文本文本，如果太多的话，滚动起来！这是翻译的文本文本，如果太多的话，滚动起来！这是翻译的文本文本，如果太多的话，滚动起来！
+这是翻译的文本文本，如果太多的话，滚动起来！
+这是翻译的文本文本，如果太多的话，滚动起来！这是翻译的文本文本，如果太多的话，滚动起来！
+这是翻译的文本文本，如果太多的话，滚动起来！
+这是翻译的文本文本，如果太多的话，滚动起来！
+这是翻译的文本文本，如果太多的话，滚动起来！这是翻译的文本文本，如果太多的话，滚动起来！这是翻译的文本文本，如果太多的话，滚动起来！
+这是翻译的文本文本，如果太多的话，滚动起来！
+这是翻译的文本文本，如果太多的话，滚动起来！
+这是翻译的文本文本，如果太多的话，滚动起来！"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/finish_dest_tv_text_translate_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/translate_normal"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!-- 上传文档 -->
+
+        <TextView
+            android:id="@+id/upload_document_tv_text_translate_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_upload_text_translate"
+            android:drawableLeft="@drawable/ic_doc_trans_entrance_icon"
+            android:drawablePadding="3dp"
+            android:text="@string/hint_translate_text_document_guid"
+            android:textColor="@color/blue3"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+    <!-- 背景分隔 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/grey32" />
+    <!--  翻译历史-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="@string/hint_translate_text_history"
+                android:textColor="@color/black7"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/more_history_tv_text_translate_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/ic_more"
+                android:text="@string/hint_translate_text_history_more"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/history_rc_text_translate_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</LinearLayout>

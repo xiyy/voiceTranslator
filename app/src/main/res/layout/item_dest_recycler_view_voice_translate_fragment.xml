@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_item_dest_recycler_view_voice_translate_fragment"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_dest_asr_item_recycler_view_voice_translate_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginTop="15dp"
+            android:text="哒哒哒哒哒哒阿斯顿发达打发到付阿斯顿发发斯蒂芬阿斯顿发斯蒂芬阿斯顿发斯蒂芬"
+            android:textColor="@color/grey27"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_view_dest_translate_item_recycler_view_voice_translate_fragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_weight="1"
+                android:text="asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/image_view_dest_play_item_recycler_view_voice_translate_fragment"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/btn_chat_voice_left3" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+// Copyright 2018 Sogou Inc.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+package sogou.speech.tts.v1;
+
+option cc_enable_arenas = true;
+option csharp_namespace = "Sogou.Speech.TTS.V1";
+option go_package = "golang.speech.sogou.com/apis/tts/v1;tts";
+option java_multiple_files = true;
+option java_outer_classname = "TTSProto";
+option java_package = "com.sogou.speech.tts.v1";
+option objc_class_prefix = "SPB";
+option php_namespace = "Sogou\\Speech\\TTS\\V1";
+option swift_prefix = "SPB";
+
+// Service that implements Sogou Speech Text-to-Speech API.
+service tts {
+
+  // Synthesizes speech synchronously: receive results after all text input
+  // has been processed.
+  rpc Synthesize(SynthesizeRequest) returns (SynthesizeResponse);
+
+  // Performs unidirectional streaming synthesizes
+  rpc StreamingSynthesize(SynthesizeRequest) returns (stream SynthesizeResponse);
+}
+
+
+message SynthesizeRequest {
+    // *Required*. The Synthesizer requires either plain text as input.
+    SynthesisInput input = 1;
+
+    // *Required*. The configuration of the synthesize.
+    SynthesizeConfig config = 2;
+}
+
+message SynthesizeConfig {
+    // *Required*. The desired voice of the synthesized audio.
+    VoiceConfig voice_config = 1;
+
+    // *Required*. The configuration of the synthesized audio.
+    AudioConfig audio_config = 2;
+}
+
+message SynthesisInput {
+    // *Required*. The raw text to be synthesized.
+    string text = 1;
+}
+
+message VoiceConfig {
+
+  // *Required*. The language code of the voice.
+  // Example: "zh-cmn-Hans-CN".
+  // See [Language Support](https://docs.speech.sogou.com/docs/tts/resources/languages) for a list of the currently supported language codes.
+  string language_code = 1;
+
+
+  // *Optional*. The name of the speaker. If not set, the service will choose a
+  // voice based on the other parameters such as language_code.
+  // Current availabe speakers: [male, female]
+  string speaker = 2;
+
+}
+
+message AudioConfig {
+
+
+  // Configuration to set up audio encoder. The encoding determines the output
+  // audio format that we'd like.
+  enum AudioEncoding {
+  
+    // Not specified. Will return result 400.
+    ENCODING_UNSPECIFIED = 0;
+
+    // Uncompressed 16-bit signed little-endian samples (Linear PCM).
+    // Audio content returned as LINEAR16 also contains a WAV header.
+    // sample rate = 16000
+    LINEAR16 = 1;
+
+    // MP3 audio. currently sample rate = 16000
+    MP3 = 2;
+  
+    // Adaptive Multi-Rate Narrowband codec. sample rate = 8000.
+    AMR = 3;
+  }
+
+  // *Required*. The format of the requested audio byte stream.
+  AudioEncoding audio_encoding = 1;
+  
+  // *Optional* speaking rate/speed, in the range [0.7, 1.3]. 1.0 is the normal
+  // native speed supported by the specific voice.
+  // If unset(0.0), defaults to the native 1.0 speed. Any
+  // other values < 0.7 or > 1.3 will return an error.
+  double speaking_rate = 2;
+
+  // *Optional* speaking pitch, in the range [0.8, 1.2]. 1.0 is the default pitch.
+  // If unset(0.0), defaults to the native 1.0 pitch. Any
+  // other values < 0.8 or > 1.2 will return an error.
+  double pitch = 3;
+
+  // *Optional* audio volume, in the range [0.7, 1.3]. 1.0 is the default volume.
+  // If unset(0.0), defaults to the native 1.0 volume. Any
+  // other values < 0.7 or > 1.3 will return an error.
+  double volume = 4;
+
+}
+
+
+message SynthesizeResponse {
+  // The audio data bytes encoded as specified in the request, including the
+  // header (For LINEAR16 audio, we include the WAV header). Note: as
+  // with all bytes fields, protobuffers use a pure binary representation.
+  bytes audio_content = 2;
+}
